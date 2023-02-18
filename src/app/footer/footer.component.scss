@@ -1,0 +1,122 @@
+
+$tm: 30px;
+
+$font_size: 15px;
+
+$margin_gap_dist: 8%;
+
+.base{
+    height: 450px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: rgb(254, 247, 204);
+}
+.middle{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+}
+.links{
+    display: flex;
+    margin-right: $margin_gap_dist;
+    margin-top: $tm;
+    
+    //background-color: yellow;
+}
+.events-list li a{
+    text-decoration: none;
+    color: rgb(117, 117, 117);
+    font-size: $font_size;
+}
+.events-list li a:hover{
+    color: rgb(177, 177, 177);
+    cursor: pointer;
+}
+.events-list{
+    list-style: none;
+    margin-right: 100px;
+}
+.bold-item{
+    //font-family: monospace;
+    font-family: serif;
+    //font-size: 18px; 
+}
+.socials, .socials-mobile{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: $tm;
+}
+.socials div a img, .socials-mobile div a img{
+    width: 30px;
+}
+.socials div, .socials-mobile div{
+    display: flex;
+    justify-content: center;
+}
+.details{
+    margin-top: $tm;
+    margin-right: $margin_gap_dist;
+    //background-color: rgb(199, 79, 79);
+}
+.details p{
+    font-family: serif;
+    font-size: $font_size;
+}
+/*
+.first-line::after{
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 80%;
+    opacity: 80%;
+    background-color: rgb(91, 91, 91);
+
+    margin-left: -20px;
+    margin-top: 20px;
+}
+.second-line::after{
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 80%;
+    opacity: 80%;
+    background-color: rgb(91, 91, 91);
+
+    margin-left: 20px;
+    margin-top: 20px;
+}*/
+
+@media screen and (max-width: 950px),(min-width: 100px)  {
+    .middle{
+        flex-direction: row;
+    }
+    .links{
+        flex-direction: column;
+        
+    }
+    .socials-mobile{
+        visibility: visible;
+        margin-left: -50px;
+    }
+    .socials{
+        visibility: hidden;
+    }
+}
+@media screen and (min-width: 950px)  {
+    .middle{
+        flex-direction: row;
+    }
+    .links{
+        flex-direction: row;
+    }
+    .socials{
+        margin-left: -50px;
+        visibility: visible;
+    }
+    .socials-mobile{
+        visibility: hidden;
+    }
+}

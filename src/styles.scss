@@ -1,1 +1,103 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+
+//$vbbc-primary: mat.define-palette(mat.$indigo-palette);
+//$vbbc-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+//$vbbc-primary: mat.define-palette(mat.$green-palette);
+//$vbbc-accent: mat.define-palette(mat.$blue-palette);
+
+$my-blue-palette: (
+ 50: #e8eff6,
+ 100: #aac0d6,
+ 200: #7aa4cd,
+ 300: #5f92c6,
+ 400: #3b78b4,
+ 500: #2268ad,
+ // ... continues to 900
+ contrast: (
+   50: rgba(black, 0.87),
+   100: rgba(black, 0.87),
+   200: rgba(black, 0.87),
+   300: rgba(black, 0.87),
+   400: white,
+   500: white,
+   // ... continues to 900
+ )
+);
+
+
+$my-gray-palette: (
+ 50: #ededed,
+ 100: #cdcdcd,
+ 200: #bbbbbb,
+ 300: #aaaaaa,
+ 400: #817f7f,
+ 500: #626060,
+ // ... continues to 900
+ contrast: (
+   50: rgba(black, 0.87),
+   100: rgba(black, 0.87),
+   200: rgba(black, 0.87),
+   300: rgba(black, 0.87),
+   400: rgba(black, 0.87),
+   500: rgba(black, 0.87),
+   // ... continues to 900
+ )
+);
+
+$my-primary: mat.define-palette(mat.$blue-palette, 500);
+$my-accent: mat.define-palette(mat.$gray-palette, 800);
+
+$my-warn: mat.define-palette(mat.$red-palette);
+
+
+// The warn palette is optional (defaults to red).
+//$vbbc-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$vbbc-theme: mat.define-light-theme((
+  color: (
+    primary: $my-primary,
+    accent: $my-accent,
+    warn:  $my-warn,
+  )
+));
+
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($vbbc-theme);
+
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.clean-list{
+  list-style: none;
+}
+.clean-list li a{
+  text-decoration: none;
+}

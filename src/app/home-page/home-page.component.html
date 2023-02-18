@@ -1,0 +1,51 @@
+
+<div class="spacer"></div>
+
+<app-latest-sermon-view></app-latest-sermon-view>
+
+<div class="page-content">
+
+    <div class="sermon-view">
+        <div class="sermon-parent">
+            <div class="sermon-children" *ngFor="let s of sermonList">
+                <app-sermon-square-card sermonDescription="{{s[2]}}" sermonTitle="{{s[0]}}" sermonPassage="{{s[1]}}"></app-sermon-square-card>
+            </div>
+        </div>
+        
+    </div>
+
+    
+</div>
+
+
+
+
+<!--
+        TEST FOR DROP DOWN BUTTONS IN BOOTSTRAP AND MATERIALS
+
+<div class="btn-group" dropdown>
+    <button id="button-basic" dropdownToggle type="button" class="btn btn-primary dropdown-toggle"
+        aria-controls="dropdown-basic">
+    Button dropdown <span class="caret"></span>
+    </button>
+    <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
+        role="menu" aria-labelledby="button-basic">
+        <li role="menuitem"><a class="dropdown-item" href="#">Action</a></li>
+        <li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>
+        <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
+        <li class="divider dropdown-divider"></li>
+        <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a>
+        </li>
+    </ul>
+
+</div>
+
+
+<button mat-flat-button [matMenuTriggerFor]="menu" color="primary">Click Me!</button>
+<mat-menu #menu="matMenu">
+    <button mat-menu-item color="accent">Action 1</button>
+    <button mat-menu-item color="accent">Action 2</button>
+    <button mat-menu-item color="warn">Action 3</button>
+</mat-menu>
+
+-->

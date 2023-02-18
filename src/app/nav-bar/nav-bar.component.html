@@ -1,0 +1,180 @@
+<div class="top">
+    <!--
+    <div class="photo">
+        <img src="../../assets/images/open-bible.jpg" >
+
+    </div>
+    <div class="btn-parent">
+        <div class="btn-group">
+            <button class="btn btn-primary" 
+                btnCheckBox tabindex="0" 
+                [(ngModel)]="navCheckModel.left"
+                routerLink="" >Home</button>
+        
+                <button class="btn btn-primary" 
+                btnCheckBox tabindex="0" 
+                [(ngModel)]="navCheckModel.middle" 
+                routerLink="sermons" >Sermons</button>
+            
+
+
+            <button class="btn btn-primary" 
+                btnCheckBox tabindex="0" 
+                [(ngModel)]="navCheckModel.middle" 
+                routerLink="events" >Events</button>
+        
+            <button class="btn btn-primary" 
+                btnCheckBox tabindex="0" 
+                [(ngModel)]="navCheckModel.right" 
+                routerLink="contact" >Contact</button>
+        </div>
+    </div>
+    
+    <br>
+    -->
+
+    <div class="my-mat-nav"> <!-- Victor Valley Bible Church -->
+        <!--<button mat-flat-button color="primary" class="logo-btn" routerLink=""><img src="../../assets/images/churchlogo.jpg" alt=""></button> -->
+        <a class="logo-icon" mat-flat-button routerLink="">Victor Valley Bible Church</a><!--<img src="../../assets/images/churchlogo.jpg" alt="">-->
+        <ul class="clean-list mynav">
+            <li><a mat-flat-button href="" color="primary" >Home</a></li>
+            <li><a mat-flat-button (click)="sermonsDropDownState = !sermonsDropDownState" color="primary" >Sermons</a></li>
+            <li><a mat-flat-button (click)="ministryDropDownState = !ministryDropDownState" color="primary" >Ministry</a></li>
+            <!--
+            <li><a mat-flat-button [matMenuTriggerFor]="sermonsMenu" color="primary" >
+                Sermons
+                <span class="material-icons align-icon"> arrow_drop_down </span>
+            </a></li>
+            -->
+            <li><a mat-flat-button color="primary" routerLink="about">About</a></li>
+        </ul>
+
+        
+        <mat-menu #sermonsMenu="matMenu" style="width: 200px;">
+            <button mat-menu-item color="accent" routerLink="sermons">All Sermons</button>
+            <button mat-menu-item color="accent">2023</button>
+            <button mat-menu-item color="accent">2022</button>
+            <button mat-menu-item color="accent">2021</button>
+            <button mat-menu-item color="accent">2020</button>
+            <!--
+            <button mat-menu-item color="warn" [matMenuTriggerFor]="years">By Year</button>
+            -->
+        </mat-menu>
+
+        <mat-menu #years>
+            <button mat-menu-item color="accent">2023</button>
+            <button mat-menu-item color="accent">2022</button>
+            <button mat-menu-item color="accent">2021</button>
+            <button mat-menu-item color="accent">2020</button>
+        </mat-menu>
+
+
+        <div class="sermons-dropdown" *ngIf="sermonsDropDownState">
+            <!--
+            <p>
+                lectus not moerg pqwrt sd tnsd sewo vmlp itcknes slkdjg apse cl 
+            </p>
+            -->
+            <ul class="events-list">
+                <li><b>Sermons By Year</b></li>
+                <li><a>2023</a></li>
+                <li><a>2022</a></li>
+                <li><a>2021</a></li>
+                <li><a>2020</a></li>
+                <li><a>Archived</a></li>
+            </ul>
+        </div>
+
+        <div class="ministry-dropdown" *ngIf="ministryDropDownState">
+            <ul class="events-list">
+                <li><b>Ministry</b></li>
+                <li><a>Our Pastor</a></li>
+                <li><a>Missonaries</a></li>
+                <li><a>Bus Stop Ministry</a></li>
+                <li><a>Awana Program</a></li>
+                <li><a>Special Music</a></li>
+            </ul>
+            <ul class="events-list">
+                <li><b>Bible Study</b></li>
+                <li><a>Men's Breakfast</a></li>
+                <li><a>Ladies Bible Study</a></li>
+                <li><a>Marriage Bible Study</a></li>
+                <li><a>Bible Study and Prayer</a></li>
+            </ul>
+        </div>
+
+        
+    </div>
+
+    <!--        THIS IS FOR CUSTOM GRACE TO YOU LIKE NAV DROP DOWN
+
+    <br>
+
+    <div class="my-dropdown-navbar">
+
+        <div class="logo">
+            <button mat-flat-button color="warn" class="">Victor Valley Bible Church</button>
+        </div>
+        <div class="nav">
+            <button mat-flat-button href="" color="primary" >Home<span class="material-icons"> home </span></button>
+            <button mat-flat-button color="primary" (click)="toggleMenuOverlay()">Ministry<span class="material-icons"> arrow_drop_down </span></button>
+            <button mat-flat-button href="" color="primary" >Sermons<span class="material-icons"> arrow_drop_down </span></button>
+            <button mat-flat-button href="" color="primary" >Events</button>
+            <button mat-flat-button color="primary" >About<span class="material-icons"> arrow_drop_down </span></button>
+        </div>
+
+    </div>
+
+    <div class="overlay">
+        <p>text slusdt slks a -adpdsg s di jsme  k sdjalkj dk sdk fpr sdlk  ;s;lfepsd </p>
+        <button>click</button>
+    </div>
+    -->
+
+    <br>
+    
+
+</div>
+
+
+
+
+
+
+
+
+<!-- Desktop Link No Btn
+<ul class="my-nav">
+    <li>
+      <a routerLink=""  class=" left-btn" style="list-style: none;">Home</a>
+    </li>
+    <li>
+        <a routerLink="sermons"  class="middle-btn" >Sermons</a>
+    </li>
+    <li>
+        <a routerLink="events"  class=" middle-btn" >Events</a>
+    </li>
+    <li>
+        <a routerLink="contact"  class=" right-btn" >Contact</a>
+    </li>
+</ul>
+
+
+  MOBILE 
+
+<ng-template #content let-offcanvas>
+	<div class="offcanvas-header">
+		<h4 class="offcanvas-title">Offcanvas title</h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="offcanvas.dismiss('Cross click')"></button>
+	</div>
+	<div class="offcanvas-body">
+		<p>One fine body&hellip;</p>
+		<div class="text-end">
+			<button type="button" class="btn btn-outline-dark" (click)="offcanvas.close('Close click')">Close</button>
+		</div>
+	</div>
+</ng-template>
+
+<button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo offcanvas</button>
+ -->
+

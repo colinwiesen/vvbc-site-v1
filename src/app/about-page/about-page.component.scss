@@ -1,0 +1,75 @@
+@import '../home-page/home-page.component.scss';
+// import content
+
+.page-content{
+    margin-left: 100px;
+}
+.fixed-scrolling{
+    position: fixed;
+}
+.jump-links{
+    position: absolute;
+    background-color: rgb(224, 224, 224);
+    width: 250px;
+    height: 250px;
+    border-radius: 2px;
+    left: -40px;
+    top: 700px;
+    z-index: 5;
+}
+.jump-links ul{
+    list-style: none;
+    margin-top: 30px;
+}
+.jump-links ul li{
+    margin-top: 10px;
+}
+.jump-links ul li a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    transition: .5s;
+}
+.jump-links ul li a:hover{
+    color: rgb(236, 236, 236);
+    background-color: rgb(99, 136, 185);
+    padding: 2px;
+    border-radius: 5px;
+}
+
+.pastor-card{
+    width: 80%;
+    margin: auto;
+}
+.about-pastor{
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+}
+.about-pastor h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.about-pastor *{
+    margin-top: 10px;
+}
+//  OUR CHURCH 
+.our-church{
+    
+    width: 60%;
+    margin: auto;
+}
+.our-church::after{
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 350px;
+    left: 230px;
+    margin: -350px 0px 0px 0px;
+    
+    background-color: rgb(134, 134, 134);
+    z-index: 1;
+}
+.oc-title{
+    margin-left: 40px;
+    margin-bottom: 10px;
+}
+

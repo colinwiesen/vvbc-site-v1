@@ -1,0 +1,125 @@
+
+@import url('../footer/footer.component.scss');
+
+$navHight: 50px;
+
+.btn{
+    position: inherit;
+    height: 40px;
+    width: 150px;
+    background-color: rgb(39, 111, 182);
+}
+.btn:active{
+    transition: .2s;
+    background-color: rgb(46, 92, 164);
+}
+.btn-group{
+    width: 60%;
+}
+.btn-parent{
+    display: flex;
+    justify-content: center;
+    margin-top: -40px;
+}
+.photo{
+    height: 300px;
+    width: 100%;
+    background-color: rgb(56, 215, 255);
+    
+    display: flex;
+    justify-content: center;
+}
+.photo img{
+    display: block;
+    width: 650px;
+    height: 100%;
+}
+.top{
+    position: fixed ;
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+
+// Mat Nav
+a{
+    text-decoration: none;
+}
+.my-mat-nav{
+    background-color: rgb(61, 101, 182);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: $navHight;
+    z-index: 4;
+    box-shadow: 0 2px 5px ;
+}
+.my-mat-nav *{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.mynav{
+    display: flex;
+}
+.mynav *{
+    margin-right: 20px;
+    height: 25px;
+}
+
+.logo-btn{
+    position: relative;
+    height: 25px;
+
+}
+.logo-icon img{
+    position: fixed;
+    height: $navHight - 10px !important;
+    left: 200px;
+    top: 1%;
+
+    border-radius: 3px !important;
+}
+
+.sermons-dropdown{
+    display: flex;
+    position: fixed;
+    top: $navHight;
+    height: 250px;
+    width: fit-content;//500px;
+    margin-left: 50px;
+
+    border-radius: 0 0 3px 4px;
+
+    box-shadow: 5px 6px 2px rgb(90, 98, 108);
+    background-color: rgb(58, 85, 140);
+    z-index: 3;
+}
+.ministry-dropdown{
+    display: flex;
+    position: fixed;
+    top: $navHight;
+    height: 250px;
+    width: fit-content;//500px;
+    margin-left: 200px;
+
+    border-radius: 0 0 3px 4px;
+    
+    box-shadow: 5px 6px 2px rgb(90, 98, 108);
+    background-color: rgb(58, 85, 140);
+    z-index: 3;
+}
+.sermons-dropdown p{
+    width: 50%;
+    margin-left: 10px;
+}
+
+@media screen and (min-width: 600px), (max-width: 800px) {
+    .logo-btn{
+        position: absolute;
+        left: 40px;
+    }
+}

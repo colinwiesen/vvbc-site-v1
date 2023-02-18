@@ -1,0 +1,59 @@
+// offset from nav-bar
+.spacer{
+    width: 100%;
+    height: 50px;
+    content: '';
+}
+// main page content - sep from edges and center content
+.page-content{
+    width: 90%;
+    position: relative;
+    display: flex;
+    flex-direction: column  ;
+    justify-content: center;
+    margin: auto;
+    //background-color: rgb(121, 124, 117); FOR DEBUGING
+    height: fit-content
+}
+
+// temp view for sermons - need to connect to api -
+.sermon-view{
+    display: flex;
+    width: 90%;
+    background-color: rgb(120, 138, 92);
+    margin: auto;
+}
+.sermon-parent{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.sermon-children{
+    width: 250px;
+    height: 250px;
+    margin-left: 40px;
+    margin-top: 50px;
+    display: flex;
+    
+}
+.sermon-children *{
+    margin: auto;
+}
+// NOT WORKING FOR SOME FREAKING REASON
+// media resize for sermon view
+@media only screen and (min-width: 880px), (max-width: 1100px) {
+    .ch{
+        width: calc(25% - 15px);
+    }
+}
+@media only screen and (min-width: 600px), (max-width: 880px) {
+    .ch{
+        width: calc(40% - 10px);
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    .ch{
+        width: calc(20% - 20px);
+    }
+}
