@@ -1,0 +1,40 @@
+@import url('../about-page/about-page.component.scss');
+
+.content{
+    display: flex;
+    padding-top: 50px;
+}
+.sermon-content{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 300px;
+
+    background-color: aquamarine;
+    
+}
+.sermon-controls{
+    margin: auto;
+}
+.sermon-view{
+    margin-top: 20px;
+    margin: auto;
+}
+
+/* Shortcuts */
+.sermonYearList{
+    position: fixed;
+    background-color: rgb(224, 224, 224);
+    width: 250px;
+    left: 50px;
+    top: 250px;
+}
+.sermonYearList{
+    list-style: none;
+}
+.sermonYearList li:nth-child(1){
+    margin-left: -20px;
+}
+.sermonYearList li a{
+    text-decoration: none;
+}

@@ -1,8 +1,24 @@
 <div class="content">
-    <div class="controls">
-
+    <div class="sermon-content">
+        <div class="sermon-controls">
+            <h2>Archived Sermons</h2>
+        </div>
+        <div class="sermon-view">
+            <div class="sermon-parent">
+                <div class="sermon-children" *ngFor="let s of sermonList">
+                    <app-sermon-square-card sermonDescription="{{s[2]}}" sermonTitle="{{s[0]}}" sermonPassage="{{s[1]}}"></app-sermon-square-card>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="sermon-view">
-        <app-sermon-square-card></app-sermon-square-card>
-    </div>
+</div>
+<div class="sermonYearList">
+    <ul class="shortcuts">
+        <li><b>Sermons By Year</b></li>
+        <li><a href="#">2023</a></li>
+        <li><a href="#">2022</a></li>
+        <li><a href="#">2021</a></li>
+        <li><a href="#">2020</a></li>
+        <li><a href="#">Archived</a></li>
+    </ul>
 </div>

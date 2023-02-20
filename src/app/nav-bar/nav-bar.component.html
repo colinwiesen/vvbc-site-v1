@@ -38,7 +38,8 @@
         <a class="logo-icon" mat-flat-button routerLink="">Victor Valley Bible Church</a><!--<img src="../../assets/images/churchlogo.jpg" alt="">-->
         <ul class="clean-list mynav">
             <li><a mat-flat-button href="" color="primary" >Home</a></li>
-            <li><a mat-flat-button (click)="sermonsDropDownState = !sermonsDropDownState" color="primary" >Sermons</a></li>
+            <li><a mat-flat-button  color="primary" routerLink="sermons" >Sermons</a></li>
+            <!--  (click)="sermonsDropDownState = !sermonsDropDownState" -->
             <li><a mat-flat-button (click)="ministryDropDownState = !ministryDropDownState" color="primary" >Ministry</a></li>
             <!--
             <li><a mat-flat-button [matMenuTriggerFor]="sermonsMenu" color="primary" >
