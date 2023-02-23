@@ -40,7 +40,7 @@
             <li><a mat-flat-button href="" color="primary" >Home</a></li>
             <li><a mat-flat-button  color="primary" routerLink="sermons" >Sermons</a></li>
             <!--  (click)="sermonsDropDownState = !sermonsDropDownState" -->
-            <li><a mat-flat-button (click)="ministryDropDownState = !ministryDropDownState" color="primary" >Ministry</a></li>
+            <li><a mat-flat-button (mouseenter)="ministryEnter()" color="primary" >Ministry</a></li>
             <!--
             <li><a mat-flat-button [matMenuTriggerFor]="sermonsMenu" color="primary" >
                 Sermons
@@ -86,7 +86,7 @@
             </ul>
         </div>
 
-        <div class="ministry-dropdown" *ngIf="ministryDropDownState">
+        <div class="ministry-dropdown" (mouseleave)="ministryLeave()" *ngIf="ministryDropDownState" >
             <ul class="events-list">
                 <li><b>Ministry</b></li>
                 <li><a>Our Pastor</a></li>

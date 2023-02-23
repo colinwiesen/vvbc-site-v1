@@ -27,7 +27,13 @@ export class NavBarComponent {
 	open(content:any) {
 		this.offcanvasService.open(content);
 	}
-  
-
+  ministryEnter() {
+    this.ministryDropDownState = true;
+  }
+  ministryLeave() {
+    setTimeout(() => 
+    this.ministryDropDownState = !this.ministryDropDownState,
+    180)
+  }
 
 }
