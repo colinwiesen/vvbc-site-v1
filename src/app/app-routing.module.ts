@@ -6,6 +6,7 @@ import { AdminPageComponent } from './admin-page/admin-page.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { EventsPageComponent } from './events-page/events-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { LoginPageComponent } from './login-page/login-page.component';
 import { SermonsPageComponent } from './sermons-page/sermons-page.component';
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path: 'contact', component: ContactPageComponent},
   {path: 'about', component: AboutPageComponent},
   {path: 'admin', component: AdminPageComponent},
+  {path: 'login', component: LoginPageComponent},
 ];
 
 @NgModule({

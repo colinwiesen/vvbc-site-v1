@@ -1,0 +1,63 @@
+.admin-content{
+    width: 100%;
+    display: flex;
+    padding-top: 50px;
+}
+.left-menu{
+    position: fixed;
+    left: 50px;
+    background-color: aliceblue;
+}
+.page{
+    width: 80%;
+    margin: auto;
+    height: 100vh;
+}
+.add-sermon{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 100px;
+    padding-bottom: 20px;
+
+    background-color: rgb(224, 224, 224);
+
+    border-radius: 10px;
+}
+.add-sermon h3{
+    margin: auto;
+}
+.add-sermon p{
+    margin: auto;
+}
+.sermon-label,
+.sermon-file,
+.sermon-facebook{
+    padding-top: 20px;
+    padding-bottom: 30px;
+    margin: auto;
+    width: 70%;
+    display: flex;
+}
+.sermon-label input,
+.sermon-file input,
+.sermon-facebook input{
+    width: 70%;
+}
+.sermon-label button,
+.sermon-file button,
+.sermon-facebook p{
+    width: 20%;
+    margin-right: 10%;
+    font-size: 16px;
+}
+.sermon-description{
+    margin: auto;
+    width: 70%;
+}
+.sermon-description textarea{
+    
+    width: 100%;
+}

@@ -29,6 +29,7 @@ import { SermonSquareCardComponent } from './sermon-square-card/sermon-square-ca
 import { LatestSermonViewComponent } from './latest-sermon-view/latest-sermon-view.component';
 import { AdminPageComponent } from './admin-page/admin-page.component';
 import { AboutPageComponent } from './about-page/about-page.component';
+import { LoginPageComponent } from './login-page/login-page.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { AboutPageComponent } from './about-page/about-page.component';
     LatestSermonViewComponent,
     AdminPageComponent,
     AboutPageComponent,
+    LoginPageComponent,
   ],
   imports: [
     BrowserModule,
