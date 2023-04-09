@@ -10,6 +10,6 @@ export class SermonSquareCardComponent {
   @Input() sermonPassage:string = 'Eph 6:11';
   @Input() sermonDescription:string = 'How the Christian is to Walk';
 
-  @Input() image:string = '../../assets/images/Sermon_Slide_Template.jpg';
+  @Input() image:string = '../../assets/images/vvbc-cover.jpg';
 
 }

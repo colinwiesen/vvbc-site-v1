@@ -1,17 +1,31 @@
-<div class="content">
-    <div class="sermon-content">
-        <div class="sermon-controls">
-            <h2>Archived Sermons</h2>
-        </div>
-        <div class="sermon-view">
-            <div class="sermon-parent">
-                <div class="sermon-children" *ngFor="let s of sermonList">
-                    <app-sermon-square-card sermonDescription="{{s[2]}}" sermonTitle="{{s[0]}}" sermonPassage="{{s[1]}}"></app-sermon-square-card>
+<div class="page-content">
+
+    
+    
+    <mat-card class="sermon-card">
+        <div class="sermons">
+            <mat-paginator 
+            class="paginator"
+            [pageSize]="pageSize" 
+            [pageSizeOptions]="pageSizeOptions"
+            [length]="sermonList.length" 
+            (page)="onPageChange($event)">
+            </mat-paginator>
+            <div class="sermon-paginator">
+                <div class="grid-container">
+                    <div class="grid-item" *ngFor="let item of displayedItems">
+                        <app-sermon-square-card sermonDescription="{{item[2]}}" sermonTitle="{{item[0]}}" sermonPassage="{{item[1]}}"></app-sermon-square-card>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    
+    </mat-card>
+    
+    
 </div>
+
+<!---
 <div class="sermonYearList">
     <ul class="shortcuts">
         <li><b>Sermons By Year</b></li>
@@ -22,3 +36,4 @@
         <li><a href="#">Archived</a></li>
     </ul>
 </div>
+-->
