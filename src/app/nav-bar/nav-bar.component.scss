@@ -7,11 +7,11 @@ $navHight: 50px;
     position: inherit;
     height: 40px;
     width: 150px;
-    background-color: rgb(39, 111, 182);
+    background-color: #276fb6;
 }
 .btn:active{
     transition: .2s;
-    background-color: rgb(46, 92, 164);
+    background-color: #2e5ca4;
 }
 .btn-group{
     width: 60%;
@@ -24,7 +24,7 @@ $navHight: 50px;
 .photo{
     height: 300px;
     width: 100%;
-    background-color: rgb(56, 215, 255);
+    background-color: #38d7ff;
     
     display: flex;
     justify-content: center;

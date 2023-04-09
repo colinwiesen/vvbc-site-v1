@@ -7,31 +7,267 @@
             <li><a href="">New Event</a></li>
         </ul>
     </div>
-    <div class="page">
+    
+<!--
+    <mat-card>
 
-        <div class="add-sermon">
-            <h3>New Sermon</h3>
-            <p>
-                Include Facebook link,  Audio,  and Image
-            </p>
-            <div class="sermon-label">
-                <button>Add</button>
-                <input type="text"/>
-            </div>
-            <div class="sermon-facebook">
-                <p>FaceBook Link:</p> 
-                <input type="text"/>
-            </div>
-            <div class="sermon-file">
-                <button>Open File</button> 
-                <input type="text"/>
-            </div>
-            <div class="sermon-description">
-                <p>Description:</p>
-                <textarea name="" id="" cols="30" rows="5"></textarea>
+        <h2 class="sermon-form-title">New Sermon Form</h2>
+
+
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+            <mat-form-field (color)="_title.dirty ? 'primary' : 'warn'" >
+                <input 
+                    matInput
+                    type="text"
+                    autocomplete="off"
+                    placeholder="Title"
+                    formControlName="title"
+                />
+                
+                <mat-error *ngIf="_title.dirty || _title.touched" >
+                    Must provide a Title!
+                </mat-error>
+            </mat-form-field>
+            
+            <mat-form-field (color)="_passage.dirty ? 'primary' : 'warn'" >
+                <input 
+                    matInput
+                    type="text"
+                    autocomplete="off"
+                    placeholder="Passage"
+                    formControlName="passage"
+                />
+                
+                <mat-error *ngIf="_passage.dirty || _passage.touched" >
+                    Must provide a Title!
+                </mat-error>
+            </mat-form-field>
+            
+            <mat-form-field (color)="_description.dirty ? 'primary' : 'warn'" >
+                <input 
+                    matInput
+                    type="text"
+                    autocomplete="off"
+                    placeholder="description"
+                    formControlName="description"
+                />
+                
+                <mat-error *ngIf="_description.dirty || _description.touched" >
+                    Must provide a Title!
+                </mat-error>
+            </mat-form-field>
+
+            
+            
+            <mat-form-field (color)="_sermonAudio.dirty ? 'primary' : 'warn'" >
+            
+                
+                <input 
+                    matInput
+                    type="text"
+                    formControlName="sermonAudio"
+                />
+                
+                
+                <mat-error *ngIf="_sermonAudio.dirty || _sermonAudio.touched" >
+                    Must provide an Audio File!
+                </mat-error>
+            </mat-form-field>
+            
+            <mat-form-field color="primary" >
+                <input 
+                    matInput
+                    type="text"
+                    autocomplete="off"
+                    placeholder="Facebook"
+                    formControlName="facebook"
+                />
+                
+            </mat-form-field>
+            
+            <mat-form-field color="primary" >
+                <input 
+                    matInput
+                    type="text"
+                    autocomplete="off"
+                    placeholder="Sermon Notes"
+                    formControlName="sermonNotes"
+                />
+                
+                <mat-error *ngIf="_sermonNotes.dirty || _sermonNotes.touched" >
+                    Must provide a Title!
+                </mat-error>
+            </mat-form-field>
+            
+            <mat-form-field id="date-field" (color)="_date.dirty ? 'primary' : 'warn'" >
+                <input 
+                    matInput
+                    placeholder="Choose a date"
+                    formControlName="date" 
+                    [matDatepicker]="picker"
+                />
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+                
+                <mat-error *ngIf="_date.dirty || _date.touched" >
+                    Must provide a Date!
+                </mat-error>
+            </mat-form-field>
+            
+            
+        </form>
+
+        
+       
+        
+
+        <div class="button-pad">
+
+            <button 
+            mat-raised-button 
+            [disabled]="form.invalid"
+            type="submit"
+            >
+            Submit
+            </button>
+
+        </div>
+
+
+    </mat-card>
+-->
+
+    <mat-card [formGroup]="form">
+
+        <h2 class="sermon-form-title">New Sermon Form</h2>
+
+
+        
+
+            <div class="card-item" >
+                <input 
+                    class="input-item"
+                    type="text"
+                    autocomplete="off"
+                    placeholder="Title"
+                    formControlName="title"
+                />
+                
+                <div class="input-warning" *ngIf="_title.dirty && _title.touched" >
+                    Must provide a Title!
+                </div>
             </div>
             
+            <div class="card-item"  >
+                <input 
+                    class="input-item"
+                    type="text"
+                    autocomplete="off"
+                    placeholder="Passage"
+                    formControlName="passage"
+                />
+                
+                <div class="input-warning" *ngIf="_passage.dirty || _passage.touched" >
+                    Must provide a Passage!
+                </div>
+            </div>
+            
+            <div class="card-item">
+                <textarea 
+                    class="input-item"
+                    type="text"
+                    autocomplete="off"
+                    placeholder="Description"
+                    formControlName="description"
+                ></textarea>
+                
+                <div class="input-warning" *ngIf="_description.dirty || _description.touched" >
+                    Must provide a Description!
+                </div>
+            </div>
+
+            
+            
+            <div class="card-item">
+            
+                <div class="input-file-wrapper">
+                    
+                    <input 
+                        id="file-input"
+                        class="open-file"
+                        type="file"
+                        formControlName="sermonAudio"
+                    >
+                    <input 
+                        type="text"
+                        class="input-item"
+                        [disabled]="true"
+                        [textContent]="_sermonAudio"
+                        />
+                      
+                </div>
+                
+                
+                
+                <div class="input-warning" *ngIf="_sermonAudio.dirty || _sermonAudio.touched" >
+                    Must provide an Audio File!
+                </div>
+            </div>
+            
+            <div class="card-item" color="primary" >
+                <input 
+                    class="input-item"
+                    type="text"
+                    autocomplete="off"
+                    placeholder="Facebook url"
+                    formControlName="facebook"
+                />
+                
+            </div>
+            
+            <div class="card-item" color="primary" >
+                <input 
+                class="input-item"
+                    type="text"
+                    autocomplete="off"
+                    placeholder="Sermon notes link"
+                    formControlName="sermonNotes"
+                />
+                
+            </div>
+            
+            <div class="card-item" id="date-field">
+                <label class="date-label" for="sermon-date">Select a date</label>
+                <input 
+                    id="sermon-date"
+                    class="input-date"
+                    type="date"
+                    formControlName="date" 
+                />
+            </div>
+            
+
+       
+        
+
+        <div class="button-pad">
+
+            <button 
+            mat-raised-button 
+            [disabled]="isFormValid"
+            >
+            Submit
+            </button>
+
         </div>
-    </div>
+
+
+        {{form.getRawValue() | json}}
+
+
+    </mat-card>
+
     
 </div>

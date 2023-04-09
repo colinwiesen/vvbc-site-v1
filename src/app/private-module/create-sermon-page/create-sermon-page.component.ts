@@ -1,16 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { 
   FormBuilder, 
   FormGroup, 
   Validators,
 } from "@angular/forms";
 
+
 @Component({
-  selector: 'app-admin-page',
-  templateUrl: './admin-page.component.html',
-  styleUrls: ['./admin-page.component.scss']
+  selector: 'app-create-sermon-page',
+  templateUrl: './create-sermon-page.component.html',
+  styleUrls: ['./create-sermon-page.component.scss']
 })
-export class AdminPageComponent implements OnInit{
+export class CreateSermonPageComponent {
+
 
   constructor(private fb: FormBuilder) {}
 
@@ -52,14 +54,6 @@ export class AdminPageComponent implements OnInit{
   }
   get _date(){
     return this.form.get('date');
-  }
-
-  
-  
-// Run on Form Submit //
-  onSubmit(){
-
-
   }
 
 }

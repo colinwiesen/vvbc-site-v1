@@ -1,0 +1,30 @@
+.content{
+    padding-top: 20%;
+    padding-bottom: 20%;
+    margin: auto;
+}
+
+.login-form {
+    width: 40%;
+    margin: 0 auto;
+}
+.form-content *{
+    width: 100%;
+}
+
+mat-card-header{
+    padding: 20px;
+    margin: auto;
+}
+
+@media only screen and (max-width: 767px) {
+    .login-form {
+        width: 90%;
+    }
+}
+
+.button-container {
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+}
