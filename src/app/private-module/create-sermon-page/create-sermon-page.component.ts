@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpClient } from "@angular/common/http";
 import { 
   FormBuilder, 
   FormGroup, 
@@ -13,8 +14,11 @@ import {
 })
 export class CreateSermonPageComponent {
 
+  file: File;
+  fileName: string;
 
-  constructor(private fb: FormBuilder) {}
+
+  constructor(private fb: FormBuilder, private http: HttpClient) {}
 
   isFormValid = false;
   form: FormGroup;
@@ -56,4 +60,26 @@ export class CreateSermonPageComponent {
     return this.form.get('date');
   }
 
+
+
+  uploadFile(event){
+    this.file = event.target.files[0];
+    this.fileName = this.file.name;
+    console.log(`FILE UPLOAD:~ ${this.fileName}`);
+  }
+
+
+  onSubmit(){
+    const formData = new FormData();
+    formData.append('fileName', this.fileName);
+    formData.append('file', this.file);
+    console.log(`FILE UPLOAD:~ ${formData}`);
+
+    this.http.post('http://localhost:3000/upload', formData).subscribe(
+      () => console.log('Upload successful'),
+      error => console.error('Upload error:', error)
+    );
+    alert('success');
+
+  }
 }

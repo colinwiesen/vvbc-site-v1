@@ -16,6 +16,7 @@ const routes: Routes = [
   {path: 'sermons', component: SermonsPageComponent},
   //{path: 'events', component: EventsPageComponent},
   //{path: 'contact', component: ContactPageComponent},
+  {path: 'bible-on-our-day', loadChildren: () => import('./bible-on-our-day/bible-on-our-day.module').then(m => m.BibleOnOurDayModule)},
   {path: 'about', component: AboutPageComponent},
   {path: 'admin', component: AdminPageComponent},
   {path: 'private', loadChildren: () => import('./private-module/private-module.module').then(m => m.PrivateModuleModule)},

@@ -24,11 +24,13 @@ import { MatNavBarComponent } from './mat-nav-bar/mat-nav-bar.component';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from './shared/shared.module';
+import { BibleOurDayPageComponent } from './bible-our-day-page/bible-our-day-page.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    BibleOurDayPageComponent,
     
   ],
   imports: [

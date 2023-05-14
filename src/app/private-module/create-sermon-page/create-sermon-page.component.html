@@ -28,7 +28,7 @@
                 formControlName="passage"
             />
             
-            <div class="input-warning" *ngIf="_passage.dirty || _passage.touched" >
+            <div class="input-warning" *ngIf="_passage.dirty && !_passage.touched" >
                 Must provide a Passage!
             </div>
         </div>
@@ -57,6 +57,7 @@
                     id="file-input"
                     class="open-file"
                     type="file"
+                    (change)="uploadFile($event)"
                     formControlName="sermonAudio"
                 >
                 <input 
@@ -116,6 +117,7 @@
         <button 
         mat-raised-button 
         [disabled]="isFormValid"
+        (click)="onSubmit()"
         >
         Submit
         </button>
