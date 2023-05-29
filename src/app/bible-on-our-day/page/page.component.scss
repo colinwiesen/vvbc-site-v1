@@ -1,0 +1,18 @@
+.base{
+    width: 100%;
+    height: fit-content;
+    background-color: rgb(247, 247, 247);
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+}
+
+h1,h6{
+    margin: auto;
+}
+
+
+app-list-posts{
+    margin: auto;
+    margin-top: 50px;
+}

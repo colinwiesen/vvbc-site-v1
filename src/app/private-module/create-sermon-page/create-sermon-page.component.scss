@@ -1,8 +1,9 @@
-.admin-content{
-    width: 100%;
+.content{
+    width: 50%;
     display: flex;
     flex-direction: column;
-    padding-top: 50px;
+    padding-top: 80px;
+    padding-bottom: 30px;
     overflow: hidden;
 }
 .left-menu{
@@ -130,7 +131,7 @@ input[type="file"]{
     flex-direction: row;
 }
 
-.input-date-{
+.input-date{
     font-size: 20px;
     font-family: 'Segoe UI';
 

@@ -1,6 +1,7 @@
 <div class="template">
-
-    <app-post></app-post>
+    <div *ngFor="let i of postList;">
+        <app-post class="post" [title]="i.title" [description]="i.description" [link]="i.link" [id]="i.id" ></app-post>
+    </div>
     <!--    Use ng for to loop through data from DB    -->
     <!--    Posts use data from PostService* (PostService gets data that Post, ListPost, and PostDetails display)   -->
 

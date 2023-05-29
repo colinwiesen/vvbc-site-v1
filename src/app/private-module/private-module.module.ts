@@ -31,6 +31,7 @@ import { DashboardPageComponent } from './dashboard-page/dashboard-page.componen
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { DeleteSermonPageComponent } from './delete-sermon-page/delete-sermon-page.component';
+import { CreateBibleOnOurDayPageComponent } from './create-bible-on-our-day-page/create-bible-on-our-day-page.component';
 
 
 
@@ -39,7 +40,8 @@ import { DeleteSermonPageComponent } from './delete-sermon-page/delete-sermon-pa
     AdminLoginComponent,
     CreateSermonPageComponent,
     DashboardPageComponent,
-    DeleteSermonPageComponent
+    DeleteSermonPageComponent,
+    CreateBibleOnOurDayPageComponent
   ],
   imports: [
     CommonModule,

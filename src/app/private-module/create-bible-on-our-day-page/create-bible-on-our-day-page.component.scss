@@ -1,0 +1,66 @@
+mat-card{
+    display: flex;
+    flex-direction: column;
+    *{
+        margin: auto;
+    }
+    width: 50%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 20px;
+    margin-bottom: 80px;
+    background-color: rgb(238, 238, 238);
+}
+mat-error{
+    margin: auto;
+}
+mat-card-content{
+    width: 80%;
+    margin: auto;
+}
+.form-field{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin: auto;
+    padding-bottom: 30px;
+    textarea{
+        width: 100%;
+    }
+    input{
+        width: 100%;
+    }
+    
+}
+
+.date-picker{
+    display: absolute;
+    width: 75%;
+    padding-bottom: 30px;
+}
+.input-item{
+    width: 100%;
+    margin-top: 30px;
+    border-radius: 6px 6px 0px 0px;
+    
+    padding: 10px;
+    font-size: 20px;
+    font-family: 'Segoe UI';
+
+    border: none;
+    outline: none;
+}
+.input-date-{
+    font-size: 20px;
+    font-family: 'Segoe UI';
+
+    padding: 10px;
+    border-radius: 5px 5px 0px 0px;
+    border: none;
+    outline: none;
+    margin-top: 0px !important;
+    width: 100%;
+}
+.warn{
+    color: red;
+}

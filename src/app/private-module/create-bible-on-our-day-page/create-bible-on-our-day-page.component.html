@@ -1,0 +1,32 @@
+<mat-card>
+
+    <mat-card-header>
+        <h1>New Bible on Our Day</h1>
+    </mat-card-header>
+
+    <mat-card-content>
+
+        <div class="form-field">
+            <input class="input-item" type="text" placeholder="Title" [(ngModel)]="title"/>
+        </div>
+        <div class="form-field">
+            <textarea class="input-item" rows="5" placeholder="Description" [(ngModel)]="description"></textarea>
+        </div>
+        <div class="date-picker">
+            <input class="input-date-" id="date" type="date" [(ngModel)]="date"/>
+        </div>
+        <div class="form-field">
+            <input class="input-item" type="text" placeholder="Facebook url" [(ngModel)]="link"/>
+        </div>
+
+        <mat-error *ngIf="notValid" class="warn">
+            Fill out each Input!
+        </mat-error>
+
+    </mat-card-content>
+
+    <mat-card-footer>
+        <button mat-raised-button (click)="onSubmit()">Submit</button>
+    </mat-card-footer>
+
+</mat-card>

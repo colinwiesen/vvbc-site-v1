@@ -1,5 +1,7 @@
-<div class="base">
-    <h2>{{title}}</h2>
-    <p>image here</p>
-    <p>{{description}}</p>
+<div class="base" [routerLink]="['posts/', id]">
+    <img class="image" src="../../../assets/images/bible.jpg" alt=""/>
+    <div class="header">
+        <h2 class="title">{{title}}</h2>
+        <p class="description">{{desc.concat(' ...')}}More</p>
+    </div>
 </div>

@@ -70,15 +70,29 @@ export class CreateSermonPageComponent {
 
 
   onSubmit(){
+    /*
     const formData = new FormData();
     formData.append('fileName', this.fileName);
     formData.append('file', this.file);
     console.log(`FILE UPLOAD:~ ${formData}`);
+    
+    VVBC-SUPABASE SERVER
+*/
+    const data:any = {
+      'title':this._title,
+      'passage':this._passage,
+      'description':this._description,
+      'audio':this._sermonAudio,
+      'facebook':this._facebook,
+      'notes':this._sermonNotes,
+      'date':this._date,
+    }
 
-    this.http.post('http://localhost:3000/upload', formData).subscribe(
+    const res:any  = this.http.post('http://localhost:3000/addsermon', data).subscribe(
       () => console.log('Upload successful'),
       error => console.error('Upload error:', error)
     );
+    alert(res.body);
     alert('success');
 
   }
