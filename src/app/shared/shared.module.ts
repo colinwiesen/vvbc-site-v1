@@ -20,6 +20,7 @@ import { MatPaginatorModule, } from "@angular/material/paginator";
 import { MatTableModule } from '@angular/material/table';
 
 import { SermonSquareCardComponent } from '../sermon-square-card/sermon-square-card.component';
+import { SermonRectangleCardComponent } from '../sermon-rectangle-card/sermon-rectangle-card.component';
 import { LatestSermonViewComponent } from '../latest-sermon-view/latest-sermon-view.component';
 import { AdminPageComponent } from '../admin-page/admin-page.component';
 import { AboutPageComponent } from '../about-page/about-page.component';
@@ -31,6 +32,8 @@ import { SermonsPageComponent } from '../sermons-page/sermons-page.component';
 import { ContactPageComponent } from '../contact-page/contact-page.component';
 import { EventsPageComponent } from '../events-page/events-page.component';
 import { MatNavBarComponent } from '../mat-nav-bar/mat-nav-bar.component';
+import { CalendarComponent } from "../calendar/calendar.component";
+import { CalendarEventComponent } from "../calendar/calendar-event/calendar-event.component";
 
 import { AppRoutingModule } from '../app-routing.module';
 import { RouterModule } from '@angular/router';
@@ -52,9 +55,12 @@ const components:any = [
   FooterComponent,
   MatNavBarComponent,
   SermonSquareCardComponent,
+  SermonRectangleCardComponent,
   LatestSermonViewComponent,
   AdminPageComponent,
   AboutPageComponent,
+  CalendarComponent,
+  CalendarEventComponent,
   
 ];
 

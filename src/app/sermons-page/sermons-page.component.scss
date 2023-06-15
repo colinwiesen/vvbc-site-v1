@@ -1,25 +1,10 @@
-@import url('../about-page/about-page.component.scss');
-@import url('../home-page/home-page.component.scss');
-.page-content{}
-.sermon-card{}
-.paginator{}
-.sermon-content{
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    margin-left: 300px;
 
-    background-color: aquamarine;
-    margin-bottom: 200px;
-    
+.page-content{
+    width: fill;
+    overflow: hidden;
 }
-.sermon-controls{
-    margin: auto;
-}
-.sermon-view{
-    margin-top: 20px;
-    margin: auto;
-}
+
+
 
 /* Shortcuts */
 .sermonYearList{
@@ -44,17 +29,40 @@
     padding-top: 50px;
     flex-direction: column;
     width: 100%;
-    align-items: center;
+    margin: auto;
 }
 .sermon-paginator{
-    width: 80%;
+    width: 100%;
+    margin: auto;
+    margin-top: 30px;
 }
 
-.grid-container {
+.paginator{
+    margin: auto;
+}
+
+.sermon-card{
+    width: inherit;
+    padding: 50px;
+    padding-bottom: 50px;
+
+    margin: 30px;
+    margin-bottom: 50px;
+}
+/*
+.grid-container{
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 30px 20px;
-    justify-content: center; /* add this property */
-    align-items: center; /* add this property */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    grid-gap: 5em;
+}*/
+.grid-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    grid-gap: 5em;
+}
+.grid-item{
+    width: 350px;
+    height: 130px;
 }

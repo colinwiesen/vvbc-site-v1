@@ -11,7 +11,6 @@ const routes: Routes = [
   {path: 'dashboard', component: DashboardPageComponent, canActivate: [AuthGuard]},
   {path: 'dashboard/add-sermon', component: CreateSermonPageComponent},//, canActivate: [AuthGuard]
   {path: 'dashboard/add-bible-on-our-day', component: CreateBibleOnOurDayPageComponent},//, canActivate: [AuthGuard]
-  
 ];
 
 @NgModule({

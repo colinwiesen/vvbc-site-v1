@@ -79,21 +79,22 @@ export class CreateSermonPageComponent {
     VVBC-SUPABASE SERVER
 */
     const data:any = {
-      'title':this._title,
-      'passage':this._passage,
-      'description':this._description,
-      'audio':this._sermonAudio,
-      'facebook':this._facebook,
-      'notes':this._sermonNotes,
-      'date':this._date,
+      'title':this._title.value,
+      'passage':this._passage.value,
+      'description':this._description.value,
+      'audio':this._sermonAudio.value,
+      'facebook':this._facebook.value,
+      'notes':this._sermonNotes.value,
+      'date':this._date.value,
     }
 
-    const res:any  = this.http.post('http://localhost:3000/addsermon', data).subscribe(
-      () => console.log('Upload successful'),
+    this.http.post('http://localhost:3000/addsermon', data, { observe: 'response' }).subscribe(
+      res => {
+        console.log(`POST Responce: ${res.status}`);
+      },
       error => console.error('Upload error:', error)
     );
-    alert(res.body);
-    alert('success');
+    
 
   }
 }

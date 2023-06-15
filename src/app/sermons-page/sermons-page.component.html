@@ -14,7 +14,12 @@
             <div class="sermon-paginator">
                 <div class="grid-container">
                     <div class="grid-item" *ngFor="let item of displayedItems">
+
+                        <!--
                         <app-sermon-square-card sermonDescription="{{item[2]}}" sermonTitle="{{item[0]}}" sermonPassage="{{item[1]}}"></app-sermon-square-card>
+                            -->
+                        <app-sermon-rectangle-card
+                        sermonDescription="{{item[2]}}" sermonTitle="{{item[0]}}" sermonPassage="{{item[1]}}"></app-sermon-rectangle-card>
                     </div>
                 </div>
             </div>

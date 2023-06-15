@@ -1,0 +1,13 @@
+<div>
+    <mat-card>
+        <h2>Events Calendar</h2>
+        <mat-card-content>
+            <div *ngFor="let item of events" > <!-- add margin here -->
+                <!-- remove margin here -->
+                <div class="parent">
+                    <app-calendar-event [title]="item.title" [date]="item.date" [time]="item.time" [description]="item.description"></app-calendar-event>
+                </div>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>

@@ -1,0 +1,33 @@
+.content{
+    display: flex;
+    flex-direction: column;
+}
+
+mat-card{
+    width: 200px;
+    height: 250px;
+    padding: 10px;
+}
+.date-time{
+    display: flex;
+    flex-direction: row;
+}
+
+.title{
+    text-align: center;
+    margin-top: 10px;
+}
+.date{
+    margin: auto;
+    padding-bottom: 10px;
+    font-family: monospace;
+}
+.time{
+    margin: auto;
+    margin-top: 10px;
+}
+.description{
+    height: 40%;
+    margin: auto;
+    text-align: center;
+}

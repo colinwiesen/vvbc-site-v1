@@ -17,7 +17,6 @@ export class SermonsPageComponent {
                         ["Sermon title 5","Eph 6:14", "About the bible"],
                         ["Sermon title 6","Eph 6:11", "About the bible"],
                         ["Sermon title 7","Eph 6:11", "About the bible"],
-                        ["Sermon title 7","Eph 6:12", "About the bible"],
                         ["Sermon title 8","Eph 6:13", "About the bible"],
                         ["Sermon title 9","Eph 6:14", "About the bible"],
                         ["Sermon title 10","Eph 6:14", "About the bible"],
@@ -31,10 +30,13 @@ export class SermonsPageComponent {
                         ["Sermon title 18","Eph 6:14", "About the bible"],
                         ["Sermon title 19","Eph 6:14", "About the bible"],
                         ["Sermon title 20","Eph 6:14", "About the bible"],
+                        ["Sermon title 21","Eph 6:12", "About the bible"],
+                        ["Sermon title 22","Eph 6:12", "About the bible"],
+                        ["Sermon title 23","Eph 6:12", "About the bible"],
                       ];
   
   displayedItems: any[] = [];
-  pageSize = 5;
+  pageSize = 20;
   pageSizeOptions: number[] = [5, 10, 15,];
 
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;

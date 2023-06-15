@@ -1,0 +1,17 @@
+<div class="base" routerLink="sermons">
+    <div class="frame" >
+        
+    </div>
+    <div class="image" *ngIf="image != ''">
+        <img src="{{image}}" alt="">
+    </div>
+    <div class="description">
+        <div >
+            <b class="title">{{sermonTitle}} </b> <br>
+            <b class="passage">{{sermonPassage}}</b>
+        </div>
+        <!--<p class="desc"> {{sermonDescription}} <a href="Gotosermon" class="more">More</a></p>-->
+        <p class="more">More</p>
+        
+    </div>
+</div>
